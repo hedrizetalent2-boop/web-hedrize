@@ -18,7 +18,7 @@ export default function UnderConstruction() {
             Contact Us
           </a>
         </div>
-        <p className="mt-6 text-xs text-muted-foreground">Set UNDERCONSTRUCTION=0 in .env to disable this mode.</p>
+        {/*<p className="mt-6 text-xs text-muted-foreground">Set UNDERCONSTRUCTION=0 in .env to disable this mode.</p>*/}
       </div>
     </main>
   )
