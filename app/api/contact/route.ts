@@ -18,13 +18,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, error: 'Captcha verification failed' }, { status: 400 })
     }
 
-    const apiKey = process.env.RESEND_API_KEY
-    const toEmail = process.env.CONTACT_TO_EMAIL || 'info@hedrize.com'
-    const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev'
-    if (!apiKey) {
-      return NextResponse.json({ success: false, error: 'Email service not configured' }, { status: 500 })
-    }
-
     const subject = 'New Contact Form Submission'
     const html = `
       <div style="font-family: Arial, sans-serif; line-height: 1.6;">
@@ -37,18 +30,31 @@ export async function POST(request: Request) {
       </div>
     `
 
-    const sendRes = await fetch('https://api.resend.com/emails', {
+    if (process.env.NODE_ENV !== 'production') {
+      return NextResponse.json({ success: true, skipped: true })
+    }
+
+    const apiKey = process.env.SENDGRID_API_KEY
+    const toEmail = process.env.CONTACT_TO_EMAIL || 'info@hedrize.com'
+    const fromEmail = process.env.SENDGRID_FROM_EMAIL || 'no-reply@hedrize.com'
+    if (!apiKey) {
+      return NextResponse.json({ success: false, error: 'Email service not configured' }, { status: 500 })
+    }
+
+    const body = {
+      personalizations: [{ to: [{ email: toEmail }] }],
+      from: { email: fromEmail },
+      subject,
+      content: [{ type: 'text/html', value: html }],
+    }
+
+    const sendRes = await fetch('https://api.sendgrid.com/v3/mail/send', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${apiKey}`,
+        Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        from: fromEmail,
-        to: toEmail,
-        subject,
-        html,
-      }),
+      body: JSON.stringify(body),
     })
     if (!sendRes.ok) {
       return NextResponse.json({ success: false, error: 'Email send failed' }, { status: 500 })
