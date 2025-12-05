@@ -11,42 +11,42 @@ export function CoreValues() {
       title: "Integrity",
       description: "Trust is our foundation; transparency and ethics \n" +
           "guide every decision.",
-      icon: "⭐",
+      icon: "integration.png",
       color: "from-primary to-accent",
     },
     {
       title: "Partnership",
       description: "We work as an extension of our clients, not just as \n" +
           "a service provider.",
-      icon: "💡",
+      icon: "partnership.png",
       color: "from-accent to-secondary",
     },
     {
       title: "Agility",
       description: "Fast, adaptive, and precise in a changing talent \n" +
           "landscape.",
-      icon: "🤲",
+      icon: "agility.png",
       color: "from-secondary to-primary",
     },
     {
       title: "Insight",
       description: "Driven by data, market intelligence, and deep \n" +
           "industry knowledge.",
-      icon: "🤲",
+      icon: "insight.png",
       color: "from-secondary to-primary",
     },
     {
       title: "Impact",
       description: "Every placement is designed to create long term \n" +
           "organizational success.",
-      icon: "🤲",
+      icon: "impact.png",
       color: "from-secondary to-primary",
     },
     {
       title: "Diversity",
       description: "We believe the best leadership reflects varied \n" +
           "perspectives and backgrounds.",
-      icon: "🤲",
+      icon: "diversity.png",
       color: "from-secondary to-primary",
     },
   ]

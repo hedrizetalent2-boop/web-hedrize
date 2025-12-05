@@ -59,12 +59,12 @@ export function WhyChoose() {
             <div id="checklist-ourservices" className="relative z-10 md:max-w-[45%] lg:max-w-[40%] ml-auto bg-background/85 p-4 shadow-lg">
               <ul className="space-y-4">
                 {checklist.map((item) => (
-                  <li key={item.title} className="flex items-start gap-3">
-                    <span className="inline-flex w-4 h-4 rounded-full bg-accent text-white items-center justify-center text-[10px] leading-none shrink-0">✓</span>
-                    <div>
+                  <li key={item.title}>
+                    <div className="flex items-center gap-3">
+                      <span className="inline-flex w-4 h-4 rounded-full bg-accent text-white items-center justify-center text-[10px] leading-none shrink-0">✓</span>
                       <h3 className="text-lg font-bold text-primary">{item.title}</h3>
-                      <p className="mt-1 text-muted-foreground text-sm leading-snug">{item.description}</p>
                     </div>
+                    <p className="mt-1 ml-7 text-muted-foreground text-sm leading-snug">{item.description}</p>
                   </li>
                 ))}
               </ul>
