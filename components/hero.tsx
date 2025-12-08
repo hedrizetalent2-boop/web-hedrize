@@ -12,9 +12,9 @@ export function Hero() {
           {/* Left Content */}
           <div className="animate-slide-in-left">
             <div className="inline-block mb-6">
-              <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
-                Welcome to Hedrize
-              </span>
+              {/*<span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">*/}
+              {/*  Welcome to Hedrize*/}
+              {/*</span>*/}
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
@@ -27,12 +27,12 @@ export function Hero() {
             </p>
 
             <div className="flex gap-4 flex-wrap">
-              <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all hover-lift">
-                Start Your Journey
-              </button>
-              <button className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-all">
-                Learn More
-              </button>
+              {/*<button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all hover-lift">*/}
+              {/*  Start Your Journey*/}
+              {/*</button>*/}
+              {/*<button className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-all">*/}
+              {/*  Learn More*/}
+              {/*</button>*/}
             </div>
           </div>
 

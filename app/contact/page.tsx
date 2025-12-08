@@ -98,8 +98,7 @@ export default function Contact() {
                     <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">Phone</h3>
-                      <p className="text-muted-foreground">+1 (800) 123-4567</p>
-                      <p className="text-muted-foreground">+1 (800) 123-4568</p>
+                      <p className="text-muted-foreground">+62-8177-6900-656</p>
                     </div>
                   </div>
                 </div>
@@ -114,7 +113,6 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">Email</h3>
                       <p className="text-muted-foreground">info@hedrize.com</p>
-                      <p className="text-muted-foreground">support@hedrize.com</p>
                     </div>
                   </div>
                 </div>
@@ -129,8 +127,6 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">Business Hours</h3>
                       <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                      <p className="text-muted-foreground">Saturday: 10:00 AM - 4:00 PM</p>
-                      <p className="text-muted-foreground">Sunday: Closed</p>
                     </div>
                   </div>
                 </div>

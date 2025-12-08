@@ -40,11 +40,11 @@ export function Footer() {
                 <img src="/logo.png" alt="Hedrize" className="w-[150px] h-auto rounded-lg" />
               </h3>
               <p className="text-blue-100/80 mb-4 text-sm leading-relaxed">
-                Your trusted partner in premium talent acquisition and career excellence.
+                Your trusted partner in connecting visionary leaders with organizations that shape the future.
               </p>
               <div className="flex gap-4">
-                {['LinkedIn', 'Twitter', 'Facebook'].map((social) => (
-                    <a key={social} href="#" className="text-blue-200 hover:text-white transition-colors text-sm">
+                {['LinkedIn'].map((social) => (
+                    <a key={social} href="https://www.linkedin.com/company/hedrize" className="text-blue-200 hover:text-white transition-colors text-sm">
                       {social}
                     </a>
                 ))}
@@ -53,30 +53,30 @@ export function Footer() {
 
             {/* Services */}
             <div>
-              <h4 className="font-semibold mb-6 text-white">Services</h4>
-              <ul className="space-y-3 text-sm">
-                {['Executive Search', 'Specialized Recruitment', 'Contract Staffing', 'Career Coaching'].map((item) => (
-                    <li key={item}>
-                      <Link href="#" className="text-blue-100/70 hover:text-white transition-colors">
-                        {item}
-                      </Link>
-                    </li>
-                ))}
-              </ul>
+              {/*<h4 className="font-semibold mb-6 text-white">Services</h4>*/}
+              {/*<ul className="space-y-3 text-sm">*/}
+              {/*  {['Executive Search', 'Specialized Recruitment', 'Contract Staffing', 'Career Coaching'].map((item) => (*/}
+              {/*      <li key={item}>*/}
+              {/*        <Link href="#" className="text-blue-100/70 hover:text-white transition-colors">*/}
+              {/*          {item}*/}
+              {/*        </Link>*/}
+              {/*      </li>*/}
+              {/*  ))}*/}
+              {/*</ul>*/}
             </div>
 
             {/* Company */}
             <div>
-              <h4 className="font-semibold mb-6 text-white">Company</h4>
-              <ul className="space-y-3 text-sm">
-                {['About Us', 'Services', 'Contact', 'Blog'].map((item) => (
-                    <li key={item}>
-                      <Link href="#" className="text-blue-100/70 hover:text-white transition-colors">
-                        {item}
-                      </Link>
-                    </li>
-                ))}
-              </ul>
+              {/*<h4 className="font-semibold mb-6 text-white">Company</h4>*/}
+              {/*<ul className="space-y-3 text-sm">*/}
+              {/*  {['About Us', 'Services', 'Contact', 'Blog'].map((item) => (*/}
+              {/*      <li key={item}>*/}
+              {/*        <Link href="#" className="text-blue-100/70 hover:text-white transition-colors">*/}
+              {/*          {item}*/}
+              {/*        </Link>*/}
+              {/*      </li>*/}
+              {/*  ))}*/}
+              {/*</ul>*/}
             </div>
 
             {/* Contact */}
@@ -87,7 +87,7 @@ export function Footer() {
                   <span>📧</span> info@hedrize.com
                 </li>
                 <li className="flex items-center gap-2">
-                  <span>📞</span> +1 (800) 123-4567
+                  <span>📞</span> +62-8177-6900-656
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1">📍</span>

@@ -47,7 +47,7 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="neumorphic pt-5 rounded-xl border border-border overflow-hidden">
+            <div className="pt-5 rounded-xl overflow-hidden">
               <img
                 src="/logo.png"
                 alt="Hedrize Executive Talent"
@@ -74,7 +74,7 @@ export function Navigation() {
             href="/contact"
             className="hidden sm:block px-6 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all hover-lift"
           >
-            Get Started
+            Contact Us
           </Link>
 
           {/* Mobile Menu Button */}
