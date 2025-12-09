@@ -3,7 +3,7 @@ export function WhatsappFloat() {
   const num = raw.replace(/[^\d]/g, "")
   const valid = num.length >= 8
   const href = valid
-    ? `https://api.whatsapp.com/send?phone=${num}&text=${encodeURIComponent("Hello Hedrize")}`
+    ? `https://api.whatsapp.com/send?phone=${num}&text=${encodeURIComponent("Hello Hedrize Admin")}`
     : undefined
   return (
     valid ? (
