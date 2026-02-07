@@ -42,7 +42,10 @@ export function Navigation() {
   ]
 
   return (
-    <nav className={`sticky top-0 z-50 bg-background/95 backdrop-blur animate-fade-in-up transition-transform duration-300 ${isOpen ? "translate-y-0" : hidden ? "-translate-y-full" : "translate-y-0"}`}>
+    <nav
+      aria-label="Main navigation"
+      className={`sticky top-0 z-50 bg-background/95 backdrop-blur animate-fade-in-up transition-transform duration-300 ${isOpen ? "translate-y-0" : hidden ? "-translate-y-full" : "translate-y-0"}`}
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -50,7 +53,7 @@ export function Navigation() {
             <div className="pt-5 rounded-xl overflow-hidden">
               <img
                 src="/logo.png"
-                alt="Hedrize Executive Talent"
+                alt="Hedrize Executive Talent - Premium Head Hunting Solutions"
                 className="h-20 w-auto sm:h-12 lg:h-28 rounded-lg object-contain"
               />
             </div>
@@ -80,6 +83,9 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
             className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -88,7 +94,10 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in-up">
+          <div
+            id="mobile-menu"
+            className="md:hidden py-4 border-t border-border animate-fade-in-up"
+          >
             {navItems.map((item) => (
               <Link
                 key={item.label}

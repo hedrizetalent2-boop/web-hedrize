@@ -7,6 +7,7 @@ import { Services } from "@/components/services"
 import { WhyChoose } from "@/components/why-choose"
 import { Industries } from "@/components/industries"
 import { Footer } from "@/components/footer"
+import { ClientFloats } from "@/components/client-floats"
 
 export default function Home() {
   // JSON-LD for WebSite with SearchAction
@@ -55,9 +56,17 @@ export default function Home() {
         }}
       />
 
+      {/* Skip Navigation Link for Accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-lg focus:shadow-lg"
+      >
+        Skip to main content
+      </a>
+
       <div className="min-h-screen bg-background text-foreground">
         <Navigation />
-        <main>
+        <main id="main-content">
           <Hero />
           <About />
           <VisionMission />
@@ -67,7 +76,9 @@ export default function Home() {
           <Industries />
         </main>
         <Footer />
+        <ClientFloats />
       </div>
     </>
   )
 }
+

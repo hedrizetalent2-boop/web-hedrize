@@ -2,12 +2,18 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { WhatsappFloat } from "@/components/whatsapp-float"
-import { ScrollTopFloat } from "@/components/scroll-top-float"
 import "./globals.css"
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist" })
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" })
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+  display: "swap",
+})
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+  display: "swap",
+})
 
 const siteUrl = "https://hedrize.com" // TODO: Replace with your actual domain
 const siteName = "Hedrize"
@@ -135,8 +141,6 @@ export default function RootLayout({
       </head>
       <body className={`font-sans antialiased`}>
         {children}
-        <ScrollTopFloat />
-        <WhatsappFloat />
         <Analytics />
       </body>
     </html>

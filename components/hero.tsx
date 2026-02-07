@@ -1,7 +1,10 @@
+import Image from "next/image"
+
 export function Hero() {
   return (
     <section
       id="home"
+      aria-label="Hero section"
       className="relative min-h-screen flex items-center justify-center pt-20 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       {/* Background gradient */}
@@ -47,10 +50,14 @@ export function Hero() {
                 className="relative overflow-hidden shadow-2xl"
                 style={{ borderRadius: "100px 0px 100px 0px" }}
               >
-                <img
+                <Image
                   src="/professional-headhunting-office-building.jpg"
-                  alt="Hedrize Office"
+                  alt="Professional head hunting office environment - Modern Hedrize workspace"
+                  width={800}
+                  height={600}
+                  priority
                   className="w-full h-auto"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>
