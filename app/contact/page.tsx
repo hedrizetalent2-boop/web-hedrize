@@ -220,6 +220,8 @@ export default function Contact() {
                   <p className="text-sm text-muted-foreground text-center mt-4">
                     We'll get back to you within 24 hours
                   </p>
+                  <br />
+                  <p><em>The Hedrize Executive Talent digital platform is supported by <a href="https://bridpop.com" target="_blank">Bridpop</a>, a specialist in website development services.</em></p>
                 </form>
               </div>
             </div>
